@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.healthcareapp.ui.auth.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_login_to_doctors"
+            app:destination="@id/doctorfragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.healthcareapp.ui.auth.SignUpFragment"
+        android:label="Sign Up">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorfragment"
+        android:name="com.example.healthcareapp.ui.doctors.DoctorsFragment"
+        android:label="Doctor">
+        <action
+            android:id="@+id/action_doctors_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/medfragment"
+        android:name="com.example.healthcareapp.ui.doctors.MedCardFragment"
+        android:label="MedCard">
+    </fragment>
+
+    <fragment
+        android:id = "@+id/profilefragment"
+        android:name="com.example.healthcareapp.ui.doctors.ProfileFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/action_profilefragment_to_profile_edit_fragment"
+            app:destination="@id/profile_edit_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_edit_fragment"
+        android:name="com.example.healthcareapp.ui.doctors.EditProfileFragment"
+        android:label="ProfileEdit">
+        <action
+            android:id="@+id/action_EditProfileFragment_to_ProfileFragment"
+            app:destination="@id/profilefragment" />
+    </fragment>
+
+
+</navigation>
+
+
